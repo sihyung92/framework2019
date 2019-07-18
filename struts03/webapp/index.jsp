@@ -1,4 +1,5 @@
 <%@page import="com.bit.model.Struts03Dto"%>
+<%@page import="com.bit.model.Struts03Dto"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
