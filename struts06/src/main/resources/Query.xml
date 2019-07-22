@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap 
+           PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+           "http://ibatis.apache.org/dtd/sql-map-2.dtd">  
+
+<sqlMap>
+	<select id="selectAll" resultClass="com.bit.struts.model.entity.Struts06Vo">
+	SELECT NUM,NAME,SUB,NALJA FROM STRUTS06 ORDER BY NUM DESC
+	</select>
+
+	<select id="selectOne" parameterClass="int" resultClass="com.bit.struts.model.entity.Struts06Vo">
+	SELECT * FROM struts06 WHERE num=#value#
+	</select>
+	
+	<insert id="insertOne" parameterClass="com.bit.struts.model.entity.Struts06Vo">
+	INSERT INTO struts06 VALUES (struts04_seq.nextval,#name#,#sub#,#content#,SYSDATE)	
+	</insert>
+	<update id="updateOne" parameterClass="com.bit.struts.model.entity.Struts06Vo">
+	UPDATE struts06 SET sub=#sub#,name=#name#,content=#content# WHERE num=#num#
+	</update>
+	
+	<delete id="deleteOne" parameterClass="int">
+	DELETE FROM struts06 WHERE num=#value#
+	</delete>
+</sqlMap>
